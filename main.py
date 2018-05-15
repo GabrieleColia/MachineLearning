@@ -1,8 +1,9 @@
-
+import tensorflow
 import numpy
 from matplotlib import pyplot as plt
 import argparse
 import cv2
+
 from PIL import Image
 
 im= cv2.imread('p.jpg')
