@@ -14,7 +14,7 @@ def segmentation(imgPath, pathOutput):
 
     cv2.imwrite(pathOutput, th)
 
-def pre_process(pathImage, training, pathOutput,numIter):
+def pre_process(pathImage, pathOutput,numIter):
 
     img_size_cropped=500
 
@@ -62,6 +62,11 @@ def pre_process(pathImage, training, pathOutput,numIter):
 
     return output_image
 
+
+
+
+
+
 file_txt = open("elenco.txt",'r')
 
 for line in file_txt:
@@ -93,4 +98,4 @@ for line in file_txt:
     if not os.path.exists(pathDirPre):
         os.makedirs(pathDirPre)
 
-    pre_process(pathInputPre,True, pathOutput, 2)
+    pre_process(pathInputPre, pathOutput, 2)
